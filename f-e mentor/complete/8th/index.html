@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="main">
+    <div class="left">
+      <section class="left-elem">
+        <h1>Learn to code by watching others</h1>
+        <p class="paragraph">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable. </p>
+      </section>
+    </div>
+    <div class="right">
+      <div class="right-top">
+        <p class="right-top-paragraph">Try it free 7 days then $20/mo. thereafter</p>
+      </div>
+      <div class="right-bottom">
+        <form name="MyForm">
+          <input type="text" placeholder="First Name" name="First-Name">
+          <p name="First-Name-anc"></p>
+          <input type="text" placeholder="Last Name" name="Last-Name">
+          <p name="Last-Name-anc"></p>
+          <input type="text" placeholder="Email Address" name="Email-Address">
+          <p name="Email-Address-anc"></p>
+          <input type="password" placeholder="Password" name="Password">
+          <p name="Password-anc"></p>
+          <input type="submit" class="button" value="Claim your free trial" onfocus=" valiadateForm()" ></button>
+          <p class="note">By clicking the button, you are agreeing to our Terms and Services</p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    function check(Name) {
+      if(document.MyForm[Name].value == "") {
+        document.getElementsByName(Name + '-anc')[0].innerHTML = "Để trống cmm à =))";
+        document.getElementsByName(Name + '-anc')[0].style.textAlign = "right";
+        document.getElementsByName(Name + '-anc')[0].style.color = "red";
+        document.MyForm[Name].style.border = "2px solid red";
+        // for(let i = 0; i < document.getElementsByTagName("input").length; i++)
+        // {
+        //   document.getElementsByTagName('input')[i].style.margin = "10px";
+        // }
+      }
+    }
+    function valiadateForm() {
+      //document.getElementsByName('t')[0].innerHTML = "Hello";
+      check("First-Name");
+      check("Last-Name");
+      check("Email-Address");
+      check("Password");
+    }
+  </script>
+</body>
+</html>

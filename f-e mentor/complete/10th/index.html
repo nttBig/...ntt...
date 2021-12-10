@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img src="./images/logo.svg" alt="" class="main-image" />
+      <div class="main-content">
+        <div class="left">
+          <form action="" class="bill" name="form-bill">
+            <label for="bill">Bill</label>
+            <div class="input-top">
+              <img src="./images/icon-dollar.svg" alt="" class="dollar" />
+              <input type="text" placeholder="Take a number" name="bill" class="bill-input"/>
+            </div>
+          </form>
+          <form action="" class="select-tip" name="select-tip">
+            <label for="select" class="select">Select Tip %</label>
+            <div class="input-center">
+              <div class="up">
+                <input
+                  type="button"
+                  value="5%"
+                  onclick="percent = 5; changePercent()"
+                />
+                <input
+                  type="button"
+                  value="10%"
+                  onclick="percent = 10; changePercent()"
+                />
+                <input
+                  type="button"
+                  value="15%"
+                  onclick="percent = 15; changePercent()"
+                />
+              </div>
+              <div class="down">
+                <input
+                  type="button"
+                  value="25%"
+                  onclick="percent = 25; changePercent()"
+                />
+                <input
+                  type="button"
+                  value="50%"
+                  onclick="percent = 50; changePercent()"
+                />
+                <input
+                  type="text"
+                  placeholder="Custom"
+                  class="custom"
+                  name="custom"
+                />
+              </div>
+            </div>
+          </form>
+          <form action="" name="number-of-people" class="number-of-people">
+            <div class="header">
+              <label for="number-of-people">Number of people</label>
+              <p class="anc"></p>
+            </div>
+            <div class="input-bottom">
+              <img src="./images/icon-person.svg" alt="" class="people" />
+              <input type="text" name="people" placeholder="Number of people" />
+            </div>
+          </form>
+        </div>
+        <div class="right">
+          <div class="tip">
+            <div class="tip-left">
+              <h3 class="elem">Tip Amount</h3>
+              <p class="elem">/ person</p>
+            </div>
+            <div class="tip-right">$0.00</div>
+          </div>
+          <div class="total">
+            <div class="total-left">
+              <h3 class="elem">Total</h3>
+              <p class="elem">/ person</p>
+            </div>
+            <div class="total-right">$0.00</div>
+          </div>
+          <button class="button">RESET</button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+  <script>
+    var percent = -1, // define value for algorithm
+      bill = -1,
+      nop = -1;
+    function calculateAmount(bill, percent, nop) {
+      // calculate amount
+      return Number(bill) + Number(percent) + Number(nop);
+    }
+    function calculateTotal(bill, percent, nop) {
+      // calculate total
+      return Number(bill) * Number(percent) + Number(nop);
+    }
+    function change(amount, total) {
+      // change screen value
+      document.getElementsByClassName("tip-right")[0].innerHTML =
+        "$" + String(amount);
+      document.getElementsByClassName("total-right")[0].innerHTML =
+        "$" + String(total);
+    }
+    function check(bill, percent, nop) {
+      // check if all values not negative
+      if (bill > -1 && percent > -1 && nop > -1) return true;
+      else return false;
+    }
+    document // listen event (change bill)
+      .getElementsByName("bill")[0]
+      .addEventListener("input", function () {
+        bill = document.forms["form-bill"]["bill"].value;
+        let result = check(bill, percent, nop);
+        if (result != false) {
+          change(
+            calculateAmount(bill, percent, nop),
+            calculateTotal(bill, percent, nop)
+          );
+        }
+      });
+    document // listen event (change people)
+      .getElementsByName("people")[0]
+      .addEventListener("input", function () {
+        nop = document.forms["number-of-people"]["people"].value;
+        let result = check(bill, percent, nop);
+        if (result != false) {
+          change(
+            calculateAmount(bill, percent, nop),
+            calculateTotal(bill, percent, nop)
+          );
+        }
+      });
+    function changePercent() {
+      // listen event (change percent)
+      let result = check(bill, percent, nop);
+      if (result != false) {
+        change(
+          calculateAmount(bill, percent, nop),
+          calculateTotal(bill, percent, nop)
+        );
+      }
+    }
+    document
+      .getElementsByClassName("custom")[0]
+      .addEventListener("input", function () {
+        percent = document.getElementsByClassName("custom")[0].value;
+        let result = check(bill, percent, nop);
+        if (result != false) {
+          change(
+            calculateAmount(bill, percent, nop),
+            calculateTotal(bill, percent, nop)
+          );
+        }
+      });
+    document
+      .getElementsByClassName("bill-input")[0]
+      .addEventListener("change", function () {
+        let style =
+          document.getElementsByClassName("input-top")[0].style.border;
+        if (style == "") style = "2px solid hsl(183, 100%, 15%)";
+        else style = "";
+        document.getElementsByClassName("input-top")[0].style.border = style;
+      });
+  </script>
+</html>

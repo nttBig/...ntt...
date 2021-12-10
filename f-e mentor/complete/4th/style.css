@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 75%, 39%);
+    padding-bottom: 100px;
+}
+
+.main {
+    border-radius: 15px;
+    margin-top: 20vh;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+}
+.main .top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color:hsl(0, 0%, 59%);
+    height: 35%;
+}
+.main .top .header {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.main .top .image {
+    position: relative;
+    top: -30%;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+.main .middle {
+    padding-top: 80px;
+    /* height: 175px; */
+    border-bottom: 0.5px solid black;
+}
+.main .middle .name-age-where .name-age {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+.main .middle .name-age-where .name-age .name {
+    margin-right: 10px;
+}
+.main .middle .name-age-where .name-age .age {
+    color: hsl(0, 0%, 59%);
+}
+.main .middle .name-age-where .where {
+    color: hsl(0, 0%, 59%);
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+.main .bottom ul {
+    margin-top: 50px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.main .bottom ul li {
+    width: 33%;
+    margin: auto;
+    padding: auto;
+}
+.main .bottom ul li h4 {
+    color: hsl(0, 0%, 59%);;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        width: 80vw;
+        height: 60vh;
+    }
+}

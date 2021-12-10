@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <img src="./images/illustration-box-desktop.svg" alt="" class="box" />
+        <img
+          src="./images/illustration-woman-online-desktop.svg"
+          alt=""
+          class="women"
+        />
+      </div>
+      <div class="right">
+        <h2>FAQ</h2>
+        <ul>
+          <li>
+            <div class="team-member-left">
+              <h4
+                class="team-member"
+                onclick="show(btn = 'team-member', content = team_member, arrow = 'one')"
+              >
+                How many team members can I invite?
+              </h4>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow one"
+              />
+            </div>
+            <div class="team-member-right"></div>
+          </li>
+          <li>
+            <div class="maximum-update-size-left">
+              <h4
+                class="maximum-update-size"
+                onclick="show('maximum-update-size', maximum_upadte_size, 'two')"
+              >
+                What is the maximum file upload size?
+              </h4>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow two"
+              />
+            </div>
+            <div class="maximum-update-size-right"></div>
+          </li>
+          <li>
+            <div class="reset-password-left">
+              <h4
+                class="reset-password"
+                onclick="show('reset-password', reset_password, 'three')"
+              >
+                How do I reset my password?
+              </h4>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow three"
+              />
+            </div>
+            <div class="reset-password-right"></div>
+          </li>
+          <li>
+            <div class="cancel-sub-left">
+              <h4
+                class="cancel-sub"
+                onclick="show('cancel-sub', cancel_sub, 'four')"
+              >
+                Can I cancel my subscription?
+              </h4>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow four"
+              />
+            </div>
+            <div class="cancel-sub-right"></div>
+          </li>
+          <li>
+            <div class="provide-support-left">
+              <h4
+                class="provide-support"
+                onclick="show('provide-support', provclasse_support, 'five')"
+              >
+                Do you provclasse additional support?
+              </h4>
+              <img
+                src="./images/icon-arrow-down.svg"
+                alt=""
+                class="arrow five"
+              />
+            </div>
+            <div class="provide-support-right"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var team_member =
+          "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.",
+        maximum_upadte_size =
+          "No more than 2GB. All files in your account must fit your allotted storage space.",
+        reset_password =
+          "Click “Forgot password” from the login page or “Change password” from your profile page.A reset link will be emailed to you.",
+        cancel_sub =
+          "Yes! Send us a message and we’ll process your request no questions asked.",
+        provclasse_support =
+          "Chat and email support is available 24/7. Phone lines are open during normal business hours.";
+
+      function show(btn, content, arrow) {
+        // alert(content);
+        let button = document.getElementsByClassName(btn + "-right");
+        // let ar = document.getElementsByClassName(arrow);
+        // console.log(ar[0]);
+        // console.log(button[0].innerHTML);
+        if (button[0].innerHTML == "") {
+          button[0].innerHTML = content;
+          document.getElementsByClassName(arrow)[0].style.transform =
+            "rotate(180deg)";
+          document.getElementsByClassName(btn)[0].style.fontWeight = "700";
+        } else {
+          button[0].innerHTML = "";
+          document.getElementsByClassName(arrow)[0].style.transform =
+            "rotate(0deg)";
+          document.getElementsByClassName(btn)[0].style.fontWeight = "100";
+        }
+        // let button = document.getElementByclass(btn).parentNode;
+        // let paragraph = document.createTextNode(content);
+        // let node = document.createElement('p').appendChild(paragraph);
+        // button.appendChild(node);
+      }
+    </script>
+  </body>
+</html>

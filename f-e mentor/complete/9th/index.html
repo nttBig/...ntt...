@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Ping coming soon page</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <img src="./images/logo.svg" alt="" class="header-image">
+    <section class="header-content">
+      <h1> We are launching <b>soon!</b></h1>
+      <p>Subscribe and get notified</p>
+    </section>
+    <div class="input">
+      <input type="text" name="get-email" placeholder="Your email address.." class="get-email">
+      <input type="button" value="Notify Me" class="button" onclick="check()">
+      <p class="error"></p>
+    </div>
+    <img src="./images/illustration-dashboard.png" alt="" class="dashboard">
+    <div class="social">
+      <img src="./images/icons8-facebook-f-50.png" alt="" class="fb">
+      <img src="./images/twitter.png" alt="" class="tw">
+      <img src="./images/instagram.png" alt="" class="ins">
+    </div>
+    <p class="footer">&copy; Copyright Ping. All rights reserved.</p>
+  </div>
+  
+  <footer style="margin-top: 100px;">
+    <p class="attribution" style="font-size: 15px;">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">...ntt</a>.
+    </p>
+  </footer>
+  <script>
+    function isEmail(ip) {
+      return false;
+    }
+    function check() {
+      let input = document.getElementsByName("get-email")[0].value;
+      if(input == "") {
+        alert("Để trống cmm à =))");
+      } else {
+        // alert(input);
+        if(isEmail(input) == false){
+          document.getElementsByClassName("error")[0].innerHTML = "Sai rồi bạn eii, fix đi bạn =))";
+          document.getElementsByClassName("get-email")[0].style.border = "1px solid red";
+          document.getElementsByClassName("error")[0].style.fontSize = "12px";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

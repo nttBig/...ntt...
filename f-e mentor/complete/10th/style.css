@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: hsl(183, 100%, 15%);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(185, 41%, 84%);
+}
+img.main-image {
+  margin-bottom: 10vh;
+}
+div.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  max-width: 625px;
+}
+div.main-content {
+  display: flex;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px;
+  height: 50vh;
+  max-height: 300px;
+  border-radius: 10px;
+}
+div.left {
+  width: 50%;
+  padding-right: 20px;
+}
+div.right {
+  padding-left: 10px;
+  width: 50%;
+  /* padding-bottom: 10%; */
+}
+div.input-top {
+  display: flex;
+  background-color: hsl(189, 41%, 97%);
+  padding: 5px;
+  border-radius: 5px;
+}
+img.dollar {
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
+div.input-top input {
+  border: 0;
+  width: 100%;
+  /* background-color: hsl(189, 41%, 97%); */
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  padding-right: 5px;
+  margin-right: 5px;
+}
+div.input-top input:focus {
+  outline: none;
+}
+div.input-top input::placeholder {
+  text-align: right;
+}
+form.select-tip {
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+div.input-center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+div.up,
+div.down {
+  width: 100%;
+  margin: 0.75vh 0;
+}
+div.up input,
+div.down input {
+  height: 5vh;
+  width: 30%;
+  border-radius: 5px;
+  border: 0;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+}
+input.custom {
+  width: 30%;
+  text-align: center;
+}
+input.custom::placeholder {
+  color: white;
+}
+form.number-of-people {
+  margin-top: auto;
+}
+div.input-bottom {
+  margin-top: 2%;
+  display: flex;
+  background-color: hsl(189, 41%, 97%);
+  padding: 5px;
+  border-radius: 5px;
+}
+img.people {
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
+div.input-bottom input {
+  border: 0;
+  width: 100%;
+  /* background-color: hsl(189, 41%, 97%); */
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  padding-right: 5px;
+  margin-right: 5px;
+}
+div.input-bottom input:focus {
+  outline: 0;
+}
+div.right {
+  background-color: hsl(183, 100%, 15%);
+  padding: 20px;
+  border-radius: 10px;
+}
+div.tip,
+div.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+}
+h3.elem,
+p.elem {
+  color: white;
+  font-size: 15px;
+}
+p.elem {
+  opacity: 0.5;
+  font-size: 10px;
+}
+div.tip-right,
+div.total-right {
+  color: hsl(172, 67%, 45%);
+  font-size: 30px;
+}
+button.button {
+  /* margin: 0px 10px; */
+  margin-top: 12%;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 3px;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+button:hover {
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+}
+input:hover {
+  cursor: pointer;
+}

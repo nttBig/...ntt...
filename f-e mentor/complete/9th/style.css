@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+body {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+.main .header-image {
+    margin: 25px;
+}
+.main .header-content h1 {
+    font-size: 30px;
+}
+.main .header-content p {
+    margin: 20px;
+}
+.main .header-content h1 {
+    font-weight: 100;
+    color: hsl(0, 0%, 59%);
+}
+.main .header-content b {
+    color: black;
+}
+.main .input {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.main .input input {
+    border-radius: 20px;
+    border: 1px solid hsl(223, 100%, 88%);
+    padding: 12px;
+    font-size: 10px;
+}
+.main .input .get-email {
+    width: 35%;
+    color: hsl(223, 100%, 88%);
+    padding-left: 25px;
+}
+.main .input .get-email::placeholder {
+    color: hsl(223, 100%, 88%);
+    font-size: 10px;
+}
+.main .input .get-email:focus {
+    font-size: 15px;
+    color: black;
+}
+.main .input .button {
+    background-color: hsl(223, 87%, 63%);
+    padding: 12px 25px;
+    color: white;
+    font-weight: 600;
+}
+.main .input .button:hover {
+    cursor: pointer;
+    opacity: 0.88888;
+}
+.main .input .error {
+    text-align: left;
+    padding-left: 30%;
+    margin: 5px;
+    color: red;
+}
+.main .dashboard {
+    width: 60vw;
+    margin: 40px;
+}
+.main .social .fb, .main .social .tw, .main .social .ins {
+    width: auto;
+    height: 50px;
+    margin: 20px;
+}
+.main .social .fb:hover, .main .social .tw:hover, .main .social .ins:hover {
+    cursor: pointer;
+    /* background-color: whitesmoke; */
+}
+.main .footer {
+    margin: 20px;
+    font-size: 18px;
+}

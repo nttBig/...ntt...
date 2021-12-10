@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: hsl(0, 0%, 98%);
+}
+.main {
+    height: 80vh;
+    margin-top: 10vh;
+    width: 850px;
+}
+section.top {
+    margin-top: 50px;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 100px;
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 50px;
+}
+div.top {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.left, .top, .right, .bottom {
+    height: 30vh;
+}
+
+.hero div {
+    width: 90%;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.hero .left {
+    border-top: 5px solid hsl(180, 62%, 55%);
+    margin-right: 20px;
+}
+.hero .center {
+    margin-right: 20px;
+    padding: 0;
+    border: 0;
+}
+.hero .center .top {
+    margin-bottom: 2vw;
+    width: 100%;
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+.hero .center .bottom {
+    width: 100%;
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.hero .right {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+.hero div p {
+    margin-top: 10px;
+}
+.hero div img {
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    margin-right: 30px;
+    margin-top: 30px;
+    /* margin-bottom: 30px; */
+    float: right;
+}
+@media screen and (max-width: 800px){
+    section.top {
+        margin-bottom: 20px;
+    }
+    .hero {
+        flex-direction: column;
+    }
+    .hero div {
+        width: 100%;
+    }
+    .hero .center,
+    .main .hero .left, .main .hero .right, .main .hero .center .top, .main .hero .center .bottom, .main .right {
+        margin: 0;
+    }
+    .main .hero .left, .main .hero .center .top, .main .hero .center .bottom {
+        margin-bottom: 20px;
+    }
+    .hero div img {
+        width: 20%;
+        margin-top: 40px;
+        
+    }
+}

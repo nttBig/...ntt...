@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+html {
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/bg-pattern-desktop.svg");
+}
+.left {
+    width: 50%;
+}
+.box {
+    position: relative;
+    z-index: -1;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-top: 20vh;
+    margin-bottom: 8vh;
+    width: 55vw;
+    height: auto;
+    border-radius: 20px;
+    padding: 5vh;
+}
+.left {
+    display: flex;
+    align-items: center;
+}
+img.women {
+    width: 25vw;
+    position: relative;
+    transform: translateX(-18vw);
+    z-index: 0;
+}
+img.box {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-8vw);
+    width: 25vw;
+}
+.right {
+    width: 100%;
+    padding-left: 25px;
+}
+.main .right h2 {
+    padding-left: 15px;
+    font-size: 20px;
+}
+h4 {
+    margin: 0;
+}
+ul {
+    width: 100%;
+}
+li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+}
+.team-member-left, .maximum-update-size-left, .reset-password-left, .cancel-sub-left, .provide-support-left {
+    display: flex;
+    align-items: center;
+}
+.team-member-right, .maximum-update-size-right, .reset-password-right, .cancel-sub-right, .provide-support-right {
+    padding-left: 10px;
+    width: 80%;
+}
+li:hover {
+    cursor: pointer;
+}
+.header {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+li h4 {
+    margin: 10px;
+}
+.arrow {
+    width: 10px;
+    height: 7px;
+}
+.arrow-change {
+    transform: rotate(180deg);
+}
+.arrow-change-rotate {
+    transform: rotate(180deg);
+}
+.team-member, .maximum-update-size, .reset-password, .cancel-sub, .provide-support {
+    font-weight: 100;
+}
+.team-member:hover, .maximum-update-size:hover, .reset-password:hover, .cancel-sub:hover, .provide-support:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+@media screen and (max-width: 990px) {
+    .main {
+        flex-direction: column;
+    }
+    .right {
+        padding: 0;
+        align-items: center;
+    }
+    .left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-left: 100px;
+        padding-bottom: 100px;
+    }
+    img.box {
+        position: static;
+        /* transform: translate(50%, -70%); */
+        width: 100px;
+    }
+    img.women {
+        position: static;
+        width: 100%;
+        /* transform: translate(-20%, -70%); */
+    }
+    .right h2 {
+        padding: 0;
+    }
+}
